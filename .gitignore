@@ -1,0 +1,8 @@
+*.elf
+*.rel
+*.gci
+*.bin
+*.bak
+
+.vscode/
+build.*/
