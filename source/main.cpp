@@ -2,8 +2,8 @@
  * @file main.cpp
  * @author Captain Kitty Cat (youtube.com/@captainkittyca2)
  * @brief Adds three masks, 3-day cycle, ISG, and more mechanics from Majora's Mask onto TP
- * @version 0.6
- * @date 2026-01-12
+ * @version 0.6.1
+ * @date 2026-01-19
  *
  * @copyright Copyright (c) 2026
  *
@@ -628,37 +628,36 @@ namespace mod
                 eventFlagResetFunnc(0x3c10, false);
                 dComIfG_gameInfo.save.save_file.mEvent.mEvent[0x52] = 0;
                 eventFlagResetFunnc(0x0701, false);
-
-                stageFlagResetFunnc(0x11, 0, 0);
-                stageFlagResetSpecificFunnc(0x11, 1, 0x10);
-                stageFlagResetSpecificFunnc(0x11, 2, 2);
-                stageFlagResetFunnc(0x11, 3, 0);
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[8] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[8] &= ~2;
-                stageFlagResetSpecificFunnc(0x11, 9, 0x20);
-                stageFlagResetFunnc(0x11, 0xA, 0);
-                stageFlagResetSpecificFunnc(0x11, 0xB, 4);
-                stageFlagResetFunnc(0x11, 0xC, 0);
-                stageFlagResetSpecificFunnc(0x11, 0xD, 0x80);
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~1;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xF] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xF] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x10] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x10] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x11] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x11] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x11] &= ~1;
-                stageFlagResetFunnc(0x11, 0x12, 0); stageFlagResetFunnc(0x11, 0x13, 0);
-                stageFlagResetFunnc(0x11, 0x15, 0); stageFlagResetFunnc(0x11, 0x16, 0);
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x17] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x17] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x17] &= ~0x10;
-                stageFlagResetFunnc(0x11, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x11, 0x1D, 16);
             }
+            stageFlagResetFunnc(0x11, 0, 0);
+            stageFlagResetSpecificFunnc(0x11, 1, 0x10);
+            stageFlagResetSpecificFunnc(0x11, 2, 2);
+            stageFlagResetFunnc(0x11, 3, 0);
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[8] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[8] &= ~2;
+            stageFlagResetSpecificFunnc(0x11, 9, 0x20);
+            stageFlagResetFunnc(0x11, 0xA, 0);
+            stageFlagResetSpecificFunnc(0x11, 0xB, 4);
+            stageFlagResetFunnc(0x11, 0xC, 0);
+            stageFlagResetSpecificFunnc(0x11, 0xD, 0x80);
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xE] &= ~1;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xF] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0xF] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x10] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x10] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x11] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x11] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x11] &= ~1;
+            stageFlagResetFunnc(0x11, 0x12, 0); stageFlagResetFunnc(0x11, 0x13, 0);
+            stageFlagResetFunnc(0x11, 0x15, 0); stageFlagResetFunnc(0x11, 0x16, 0);
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x17] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x17] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x11].temp_flags.memoryFlags[0x17] &= ~0x10;
+            stageFlagResetFunnc(0x11, 0x1C, 0);
+            stageFlagResetSpecificFunnc(0x11, 0x1D, 16);
 
             // Lakebed Temple
             if (dComIfG_gameInfo.save.save_file.player.player_status_b.dark_clear_level_flag >= 7) {
@@ -687,35 +686,35 @@ namespace mod
                 stageFlagResetFunnc(4, 0x1A, 0);
                 stageFlagResetFunnc(4, 0x1B, 0);
                 stageFlagResetFunnc(9, 3, 0);
-                stageFlagResetFunnc(0x12, 0, 0);
-                stageFlagResetFunnc(0x12, 1, 0);
-                stageFlagResetSpecificFunnc(0x12, 2, 1);
-                stageFlagResetSpecificFunnc(0x12, 3, 0x20);
-                stageFlagResetSpecificFunnc(0x12, 8, 0x40);
-                stageFlagResetFunnc(0x12, 9, 0);
-                stageFlagResetFunnc(0x12, 0xA, 0);
-                stageFlagResetFunnc(0x12, 0xB, 0);
-                stageFlagResetSpecificFunnc(0x12, 0xD, 0x40);
-                stageFlagResetFunnc(0x12, 0xE, 0);
-                stageFlagResetSpecificFunnc(0x12, 0xF, 2);
-                stageFlagResetFunnc(0x12, 0x10, 0);
-                stageFlagResetFunnc(0x12, 0x11, 0);
-                stageFlagResetFunnc(0x12, 0x12, 0);
-                stageFlagResetFunnc(0x12, 0x13, 0);
-                dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x14] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~1;
-                stageFlagResetFunnc(0x12, 0x17, 0);
-                stageFlagResetFunnc(0x12, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x12, 0x1D, 16);
                 /*eventFlagResetFunnc(0x0804, false);
                 eventFlagResetFunnc(0x0810, false);
                 eventFlagResetFunnc(0x0820, false);
                 eventFlagResetFunnc(0x0840, false);
                 eventFlagResetFunnc(0x0904, false);*/
             }
+            stageFlagResetFunnc(0x12, 0, 0);
+            stageFlagResetFunnc(0x12, 1, 0);
+            stageFlagResetSpecificFunnc(0x12, 2, 1);
+            stageFlagResetSpecificFunnc(0x12, 3, 0x20);
+            stageFlagResetSpecificFunnc(0x12, 8, 0x40);
+            stageFlagResetFunnc(0x12, 9, 0);
+            stageFlagResetFunnc(0x12, 0xA, 0);
+            stageFlagResetFunnc(0x12, 0xB, 0);
+            stageFlagResetSpecificFunnc(0x12, 0xD, 0x40);
+            stageFlagResetFunnc(0x12, 0xE, 0);
+            stageFlagResetSpecificFunnc(0x12, 0xF, 2);
+            stageFlagResetFunnc(0x12, 0x10, 0);
+            stageFlagResetFunnc(0x12, 0x11, 0);
+            stageFlagResetFunnc(0x12, 0x12, 0);
+            stageFlagResetFunnc(0x12, 0x13, 0);
+            dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x14] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x12].temp_flags.memoryFlags[0x16] &= ~1;
+            stageFlagResetFunnc(0x12, 0x17, 0);
+            stageFlagResetFunnc(0x12, 0x1C, 0);
+            stageFlagResetSpecificFunnc(0x12, 0x1D, 16);
 
             // Arbiter Ground
             if (dComIfG_gameInfo.save.save_file.mSave[0xA].temp_flags.memoryFlags[0x13] & 0x40) {
@@ -741,35 +740,35 @@ namespace mod
                 dComIfG_gameInfo.save.save_file.mSave[0xA].temp_flags.memoryFlags[0x14] &= ~0x40;
                 stageFlagResetFunnc(0xA, 0x17, 0);
                 stageFlagResetFunnc(0xA, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x13, 0, 4);
-                stageFlagResetSpecificFunnc(0x13, 1, 8);
-                stageFlagResetFunnc(0x13, 2, 0);
-                stageFlagResetFunnc(0x13, 3, 0);
-                uint8_t poeAmmoExterminator = 0;
-                if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[8] & 0x40) poeAmmoExterminator++;
-                if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[8] & 0x80) poeAmmoExterminator++;
-                if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[0xC] & 0x80) poeAmmoExterminator++;
-                if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[0xF] & 2) poeAmmoExterminator++;
-                dComIfG_gameInfo.save.save_file.player.player_collect.poe_count -= poeAmmoExterminator;
-                stageFlagResetFunnc(0x13, 8, 0);
-                stageFlagResetFunnc(0x13, 9, 0);
-                stageFlagResetFunnc(0x13, 0xA, 0);
-                stageFlagResetFunnc(0x13, 0xB, 0);
-                stageFlagResetFunnc(0x13, 0xC, 0);
-                stageFlagResetFunnc(0x13, 0xD, 0);
-                stageFlagResetFunnc(0x13, 0xF, 0);
-                stageFlagResetFunnc(0x13, 0x10, 0);
-                stageFlagResetFunnc(0x13, 0x11, 0);
-                stageFlagResetFunnc(0x13, 0x12, 0);
-                stageFlagResetFunnc(0x13, 0x13, 0);
-                stageFlagResetFunnc(0x13, 0x14, 0);
-                stageFlagResetSpecificFunnc(0x13, 0x15, 0x80);
-                stageFlagResetFunnc(0x13, 0x16, 0);
-                stageFlagResetFunnc(0x13, 0x17, 0);
-                stageFlagResetFunnc(0x13, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x13, 0x1D, 16);
                 eventFlagResetFunnc(0x0b40, false);
             }
+            stageFlagResetSpecificFunnc(0x13, 0, 4);
+            stageFlagResetSpecificFunnc(0x13, 1, 8);
+            stageFlagResetFunnc(0x13, 2, 0);
+            stageFlagResetFunnc(0x13, 3, 0);
+            uint8_t poeAmmoExterminator = 0;
+            if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[8] & 0x40) poeAmmoExterminator++;
+            if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[8] & 0x80) poeAmmoExterminator++;
+            if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[0xC] & 0x80) poeAmmoExterminator++;
+            if (dComIfG_gameInfo.save.save_file.mSave[0x13].temp_flags.memoryFlags[0xF] & 2) poeAmmoExterminator++;
+            dComIfG_gameInfo.save.save_file.player.player_collect.poe_count -= poeAmmoExterminator;
+            stageFlagResetFunnc(0x13, 8, 0);
+            stageFlagResetFunnc(0x13, 9, 0);
+            stageFlagResetFunnc(0x13, 0xA, 0);
+            stageFlagResetFunnc(0x13, 0xB, 0);
+            stageFlagResetFunnc(0x13, 0xC, 0);
+            stageFlagResetFunnc(0x13, 0xD, 0);
+            stageFlagResetFunnc(0x13, 0xF, 0);
+            stageFlagResetFunnc(0x13, 0x10, 0);
+            stageFlagResetFunnc(0x13, 0x11, 0);
+            stageFlagResetFunnc(0x13, 0x12, 0);
+            stageFlagResetFunnc(0x13, 0x13, 0);
+            stageFlagResetFunnc(0x13, 0x14, 0);
+            stageFlagResetSpecificFunnc(0x13, 0x15, 0x80);
+            stageFlagResetFunnc(0x13, 0x16, 0);
+            stageFlagResetFunnc(0x13, 0x17, 0);
+            stageFlagResetFunnc(0x13, 0x1C, 0);
+            stageFlagResetSpecificFunnc(0x13, 0x1D, 16);
 
             // Snowpeak
             if (libtp::tp::d_save::isSwitch_dSv_memBit(&dComIfG_gameInfo.save.save_file.mSave[8].temp_flags, 21)) {
@@ -784,39 +783,39 @@ namespace mod
                 eventFlagResetFunnc(0x0140, false); eventFlagResetFunnc(0x2208, false);
                 eventFlagResetFunnc(0x2504, false); eventFlagResetFunnc(0x2502, false);
                 eventFlagResetFunnc(0x3B40, false); eventFlagResetFunnc(0x3B20, false);
-                stageFlagResetSpecificFunnc(0x14, 1, 0x20);
-                stageFlagResetFunnc(0x14, 2, 0);
-                stageFlagResetFunnc(0x14, 3, 0);
-                stageFlagResetFunnc(0x14, 8, 0);
-                stageFlagResetSpecificFunnc(0x14, 9, 0x20);
-                stageFlagResetFunnc(0x14, 0xA, 0);
-                stageFlagResetFunnc(0x14, 0xB, 0);
-                stageFlagResetFunnc(0x14, 0xC, 0);
-                stageFlagResetFunnc(0x14, 0xD, 0);
-                stageFlagResetFunnc(0x14, 0xE, 0);
-                stageFlagResetFunnc(0x14, 0xF, 0);
-                stageFlagResetSpecificFunnc(0x14, 0x10, 0x10);
-                stageFlagResetFunnc(0x14, 0x11, 0);
-                stageFlagResetFunnc(0x14, 0x12, 0);
-                stageFlagResetSpecificFunnc(0x14, 0x13, 2);
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~1;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~0x20;
-                stageFlagResetFunnc(0x14, 0x16, 0);
-                stageFlagResetFunnc(0x14, 0x17, 0);
-                stageFlagResetFunnc(0x14, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x14, 0x1D, 16);
-                // Have to reset heart container to prevent softlock
-                if (dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x1D] & 0x10) {
-                    dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x1D] &= ~0x10;
-                    dComIfG_gameInfo.save.save_file.player.player_status_a.maxHealth -= 5;
-                }
+            }
+            stageFlagResetSpecificFunnc(0x14, 1, 0x20);
+            stageFlagResetFunnc(0x14, 2, 0);
+            stageFlagResetFunnc(0x14, 3, 0);
+            stageFlagResetFunnc(0x14, 8, 0);
+            stageFlagResetSpecificFunnc(0x14, 9, 0x20);
+            stageFlagResetFunnc(0x14, 0xA, 0);
+            stageFlagResetFunnc(0x14, 0xB, 0);
+            stageFlagResetFunnc(0x14, 0xC, 0);
+            stageFlagResetFunnc(0x14, 0xD, 0);
+            stageFlagResetFunnc(0x14, 0xE, 0);
+            stageFlagResetFunnc(0x14, 0xF, 0);
+            stageFlagResetSpecificFunnc(0x14, 0x10, 0x10);
+            stageFlagResetFunnc(0x14, 0x11, 0);
+            stageFlagResetFunnc(0x14, 0x12, 0);
+            stageFlagResetSpecificFunnc(0x14, 0x13, 2);
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x14] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~1;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x15] &= ~0x20;
+            stageFlagResetFunnc(0x14, 0x16, 0);
+            stageFlagResetFunnc(0x14, 0x17, 0);
+            stageFlagResetFunnc(0x14, 0x1C, 0);
+            stageFlagResetSpecificFunnc(0x14, 0x1D, 16);
+            // Have to reset heart container to prevent softlock when re-doing Snowpeak
+            if (dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x1D] & 0x10) {
+                dComIfG_gameInfo.save.save_file.mSave[0x14].temp_flags.memoryFlags[0x1D] &= ~0x10;
+                dComIfG_gameInfo.save.save_file.player.player_status_a.maxHealth -= 5;
             }
 
             // Temple of Time
@@ -834,25 +833,25 @@ namespace mod
                 dComIfG_gameInfo.save.save_file.mSave[7].temp_flags.memoryFlags[0x16] &= ~1;
                 dComIfG_gameInfo.save.save_file.mSave[7].temp_flags.memoryFlags[0xB] &= ~0x10;
                 stageFlagResetFunnc(7, 0xF, 0);
-                stageFlagResetFunnc(0x15, 0, 0); stageFlagResetSpecificFunnc(0x15, 1, 0x10);
-                stageFlagResetSpecificFunnc(0x15, 2, 0x10); stageFlagResetSpecificFunnc(0x15, 3, 0x20);
-                stageFlagResetFunnc(0x15, 4, 0); stageFlagResetFunnc(0x15, 5, 0);
-                stageFlagResetFunnc(0x15, 6, 0); stageFlagResetFunnc(0x15, 7, 0);
-                dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[9] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[9] &= ~4;
-                stageFlagResetSpecificFunnc(0x15, 0xA, 8); stageFlagResetFunnc(0x15, 0xB, 0);
-                stageFlagResetFunnc(0x15, 0xC, 0); stageFlagResetFunnc(0x15, 0xD, 0);
-                stageFlagResetFunnc(0x15, 0xE, 0); stageFlagResetFunnc(0x15, 0xF, 0);
-                stageFlagResetFunnc(0x15, 0x10, 0); stageFlagResetFunnc(0x15, 0x11, 0);
-                stageFlagResetFunnc(0x15, 0x12, 0); stageFlagResetFunnc(0x15, 0x13, 0);
-                stageFlagResetFunnc(0x15, 0x14, 0); stageFlagResetFunnc(0x15, 0x15, 0);
-                stageFlagResetFunnc(0x15, 0x16, 0); stageFlagResetFunnc(0x15, 0x17, 0);
-                stageFlagResetFunnc(0x15, 0x1C, 0); stageFlagResetSpecificFunnc(0x15, 0x1D, 16);
             }
+            stageFlagResetFunnc(0x15, 0, 0); stageFlagResetSpecificFunnc(0x15, 1, 0x10);
+            stageFlagResetSpecificFunnc(0x15, 2, 0x10); stageFlagResetSpecificFunnc(0x15, 3, 0x20);
+            stageFlagResetFunnc(0x15, 4, 0); stageFlagResetFunnc(0x15, 5, 0);
+            stageFlagResetFunnc(0x15, 6, 0); stageFlagResetFunnc(0x15, 7, 0);
+            dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[8] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[9] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x15].temp_flags.memoryFlags[9] &= ~4;
+            stageFlagResetSpecificFunnc(0x15, 0xA, 8); stageFlagResetFunnc(0x15, 0xB, 0);
+            stageFlagResetFunnc(0x15, 0xC, 0); stageFlagResetFunnc(0x15, 0xD, 0);
+            stageFlagResetFunnc(0x15, 0xE, 0); stageFlagResetFunnc(0x15, 0xF, 0);
+            stageFlagResetFunnc(0x15, 0x10, 0); stageFlagResetFunnc(0x15, 0x11, 0);
+            stageFlagResetFunnc(0x15, 0x12, 0); stageFlagResetFunnc(0x15, 0x13, 0);
+            stageFlagResetFunnc(0x15, 0x14, 0); stageFlagResetFunnc(0x15, 0x15, 0);
+            stageFlagResetFunnc(0x15, 0x16, 0); stageFlagResetFunnc(0x15, 0x17, 0);
+            stageFlagResetFunnc(0x15, 0x1C, 0); stageFlagResetSpecificFunnc(0x15, 0x1D, 16);
 
             // City in the sky
             if (dComIfG_gameInfo.save.save_file.mEvent.mEvent[0x21] & 2) {
@@ -898,107 +897,109 @@ namespace mod
                 libtp::tp::d_save::offFirstBit(&dComIfG_gameInfo.save.save_file.player.player_get_item, 0x84);
                 libtp::tp::d_save::offFirstBit(&dComIfG_gameInfo.save.save_file.player.player_get_item, 0xe9);
                 libtp::tp::d_save::offFirstBit(&dComIfG_gameInfo.save.save_file.player.player_get_item, 0xeb);*/
-                libtp::tp::d_save::setItem(&dComIfG_gameInfo.save.save_file.player.player_item, 21, 0xFF);
-                libtp::tp::d_save::setItem(&dComIfG_gameInfo.save.save_file.player.player_item, 22, 0xFF);
+            }
+            libtp::tp::d_save::setItem(&dComIfG_gameInfo.save.save_file.player.player_item, 21, 0xFF);
+            libtp::tp::d_save::setItem(&dComIfG_gameInfo.save.save_file.player.player_item, 22, 0xFF);
 
-                stageFlagResetFunnc(0x16, 0, 0);
-                stageFlagResetFunnc(0x16, 1, 0);
-                stageFlagResetSpecificFunnc(0x16, 2, 2);
-                stageFlagResetSpecificFunnc(0x16, 3, 0x40);
-                stageFlagResetFunnc(0x16, 8, 0);
-                stageFlagResetFunnc(0x16, 9, 0);
-                stageFlagResetFunnc(0x16, 0xA, 0); stageFlagResetFunnc(0x16, 0xB, 0);
-                stageFlagResetSpecificFunnc(0x16, 0xC, 1);
-                stageFlagResetFunnc(0x16, 0xD, 0); stageFlagResetFunnc(0x16, 0xE, 0);
-                stageFlagResetFunnc(0x16, 0x10, 0); stageFlagResetFunnc(0x16, 0x12, 0);
-                stageFlagResetFunnc(0x16, 0x13, 0);
-                stageFlagResetFunnc(0x16, 0x15, 0); stageFlagResetFunnc(0x16, 0x17, 0);
-                stageFlagResetFunnc(0x16, 0x1C, 0); stageFlagResetSpecificFunnc(0x16, 0x1D, 16);
-                if (saveInfoPtr->zButtonSloot == 21 || saveInfoPtr->zButtonSloot == 22) {
-                    saveInfoPtr->zButtonnItemm = 0xFF;
-                    zButtonTextureMomentInit(0xFF);
-                }
+            stageFlagResetFunnc(0x16, 0, 0);
+            stageFlagResetFunnc(0x16, 1, 0);
+            stageFlagResetSpecificFunnc(0x16, 2, 2);
+            stageFlagResetSpecificFunnc(0x16, 3, 0x40);
+            stageFlagResetFunnc(0x16, 8, 0);
+            stageFlagResetFunnc(0x16, 9, 0);
+            stageFlagResetFunnc(0x16, 0xA, 0); stageFlagResetFunnc(0x16, 0xB, 0);
+            stageFlagResetSpecificFunnc(0x16, 0xC, 1);
+            stageFlagResetFunnc(0x16, 0xD, 0); stageFlagResetFunnc(0x16, 0xE, 0);
+            stageFlagResetFunnc(0x16, 0x10, 0); stageFlagResetFunnc(0x16, 0x12, 0);
+            stageFlagResetFunnc(0x16, 0x13, 0);
+            stageFlagResetFunnc(0x16, 0x15, 0); stageFlagResetFunnc(0x16, 0x17, 0);
+            stageFlagResetFunnc(0x16, 0x1C, 0); stageFlagResetSpecificFunnc(0x16, 0x1D, 16);
+            if (saveInfoPtr->zButtonSloot == 21 || saveInfoPtr->zButtonSloot == 22) {
+                saveInfoPtr->zButtonnItemm = 0xFF;
+                zButtonTextureMomentInit(0xFF);
             }
 
             // Palace of Twilight and Hyrule Castle
             if (dComIfG_gameInfo.save.save_file.player.player_collect.mirror >= 15) {
-                stageFlagResetSpecificFunnc(0x17, 0, 0x40); stageFlagResetFunnc(0x17, 1, 0);
-                stageFlagResetFunnc(0x17, 2, 0); stageFlagResetSpecificFunnc(0x17, 3, 1);
-                stageFlagResetFunnc(0x17, 7, 0); stageFlagResetFunnc(0x17, 8, 0);
-                stageFlagResetFunnc(0x17, 9, 0); stageFlagResetFunnc(0x17, 0xA, 0);
-                stageFlagResetSpecificFunnc(0x17, 0xB, 2);
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~0x40;
-
-                // Light Master Sword Cutscene flag
-                //dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~0x80;
-                
-                stageFlagResetSpecificFunnc(0x17, 0xD, 1);
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xE] &= ~1;
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xE] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xF] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xF] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xF] &= ~8;
-                stageFlagResetFunnc(0x17, 0x10, 0); stageFlagResetFunnc(0x17, 0x11, 0);
-                stageFlagResetSpecificFunnc(0x17, 0x12, 4); stageFlagResetSpecificFunnc(0x17, 0x13, 2);
-                stageFlagResetFunnc(0x17, 0x15, 0); stageFlagResetSpecificFunnc(0x17, 0x16, 0x10);
-                stageFlagResetFunnc(0x17, 0x17, 0); stageFlagResetFunnc(0x17, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x17, 0x1D, 16);
-                eventFlagResetFunnc(0x2640, false); eventFlagResetFunnc(0x2620, false);
-                eventFlagResetFunnc(0x2610, false); eventFlagResetFunnc(0x2608, false);
-                eventFlagResetFunnc(0x2604, false); eventFlagResetFunnc(0x2602, false);
-                eventFlagResetFunnc(0x2601, false); eventFlagResetFunnc(0x2780, false);
-                eventFlagResetFunnc(0x2740, false); eventFlagResetFunnc(0x2720, false); eventFlagResetFunnc(0x2880, false);
-                eventFlagResetFunnc(0x4304, false); eventFlagResetFunnc(0x4302, false); eventFlagResetFunnc(0x4301, false);
-                eventFlagResetFunnc(0x4480, false); eventFlagResetFunnc(0x4440, false); eventFlagResetFunnc(0x4420, false);
-                eventFlagResetFunnc(0x4410, false); eventFlagResetFunnc(0x4408, false); eventFlagResetFunnc(0x4404, false);
-                eventFlagResetFunnc(0x4402, false); eventFlagResetFunnc(0x4401, false); eventFlagResetFunnc(0x4580, false);
-                eventFlagResetFunnc(0x4680, false); eventFlagResetFunnc(0x5410, false);
-
-                eventFlagResetFunnc(0x4208, false);
-                stageFlagResetFunnc(0x18, 0, 0); stageFlagResetFunnc(0x18, 1, 0); stageFlagResetFunnc(0x18, 2, 0);
-                stageFlagResetFunnc(0x18, 3, 0); stageFlagResetFunnc(0x18, 7, 0);
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[8] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[8] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xA] &= ~0x20;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xA] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xA] &= ~4;
-                stageFlagResetFunnc(0x18, 0xB, 0); stageFlagResetFunnc(0x18, 0xC, 0);
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xE] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xE] &= ~0x10;
-                stageFlagResetFunnc(0x18, 0xF, 0); dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~1;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x11] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x11] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x11] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~0x80;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~0x10;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~4;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x13] &= ~8;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x13] &= ~2;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x14] &= ~0x40;
-                dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x14] &= ~0x10;
-                stageFlagResetSpecificFunnc(0x18, 0x15, 4); stageFlagResetSpecificFunnc(0x18, 0x16, 1);
-                stageFlagResetSpecificFunnc(0x18, 0x17, 0x80); stageFlagResetFunnc(0x18, 0x1C, 0);
-                stageFlagResetSpecificFunnc(0x18, 0x1D, 16);
-                libtp::tp::d_save::offEventBit(&libtp::tp::d_com_inf_game::dComIfG_gameInfo.save.mTmp, 0x0C01);
-                libtp::tp::d_save::offEventBit(&libtp::tp::d_com_inf_game::dComIfG_gameInfo.save.mTmp, 0x0C02);
-                libtp::tp::d_save::offEventBit(&libtp::tp::d_com_inf_game::dComIfG_gameInfo.save.mTmp, 0x0C04);
-                dComIfG_gameInfo.save.save_file.mSave[9].temp_flags.memoryFlags[0xA] &= ~0x80;
+                eventFlagResetFunnc(0x4480, false); eventFlagResetFunnc(0x4440, false);
             }
+            
+            eventFlagResetFunnc(0x4420, false);
+            eventFlagResetFunnc(0x4410, false); eventFlagResetFunnc(0x4408, false); eventFlagResetFunnc(0x4404, false);
+            eventFlagResetFunnc(0x4402, false); eventFlagResetFunnc(0x4401, false); eventFlagResetFunnc(0x4580, false);
+            eventFlagResetFunnc(0x4680, false); eventFlagResetFunnc(0x5410, false);
+
+            eventFlagResetFunnc(0x4208, false);
+            stageFlagResetFunnc(0x18, 0, 0); stageFlagResetFunnc(0x18, 1, 0); stageFlagResetFunnc(0x18, 2, 0);
+            stageFlagResetFunnc(0x18, 3, 0); stageFlagResetFunnc(0x18, 7, 0);
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[8] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[8] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[9] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xA] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xA] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xA] &= ~4;
+            stageFlagResetFunnc(0x18, 0xB, 0); stageFlagResetFunnc(0x18, 0xC, 0);
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xD] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xE] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0xE] &= ~0x10;
+            stageFlagResetFunnc(0x18, 0xF, 0); dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x10] &= ~1;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x11] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x11] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x11] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~0x80;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x12] &= ~4;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x13] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x13] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x14] &= ~0x40;
+            dComIfG_gameInfo.save.save_file.mSave[0x18].temp_flags.memoryFlags[0x14] &= ~0x10;
+            stageFlagResetSpecificFunnc(0x18, 0x15, 4); stageFlagResetSpecificFunnc(0x18, 0x16, 1);
+            stageFlagResetSpecificFunnc(0x18, 0x17, 0x80); stageFlagResetFunnc(0x18, 0x1C, 0);
+            stageFlagResetSpecificFunnc(0x18, 0x1D, 16);
+            libtp::tp::d_save::offEventBit(&libtp::tp::d_com_inf_game::dComIfG_gameInfo.save.mTmp, 0x0C01);
+            libtp::tp::d_save::offEventBit(&libtp::tp::d_com_inf_game::dComIfG_gameInfo.save.mTmp, 0x0C02);
+            libtp::tp::d_save::offEventBit(&libtp::tp::d_com_inf_game::dComIfG_gameInfo.save.mTmp, 0x0C04);
+            dComIfG_gameInfo.save.save_file.mSave[9].temp_flags.memoryFlags[0xA] &= ~0x80;
+            stageFlagResetSpecificFunnc(0x17, 0, 0x40); stageFlagResetFunnc(0x17, 1, 0);
+            stageFlagResetFunnc(0x17, 2, 0); stageFlagResetSpecificFunnc(0x17, 3, 1);
+            stageFlagResetFunnc(0x17, 7, 0); stageFlagResetFunnc(0x17, 8, 0);
+            stageFlagResetFunnc(0x17, 9, 0); stageFlagResetFunnc(0x17, 0xA, 0);
+            stageFlagResetSpecificFunnc(0x17, 0xB, 2);
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~8;
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~0x40;
+
+            // Light Master Sword Cutscene flag
+            //dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xC] &= ~0x80;
+            
+            stageFlagResetSpecificFunnc(0x17, 0xD, 1);
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xE] &= ~1;
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xE] &= ~2;
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xF] &= ~0x20;
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xF] &= ~0x10;
+            dComIfG_gameInfo.save.save_file.mSave[0x17].temp_flags.memoryFlags[0xF] &= ~8;
+            stageFlagResetFunnc(0x17, 0x10, 0); stageFlagResetFunnc(0x17, 0x11, 0);
+            stageFlagResetSpecificFunnc(0x17, 0x12, 4); stageFlagResetSpecificFunnc(0x17, 0x13, 2);
+            stageFlagResetFunnc(0x17, 0x15, 0); stageFlagResetSpecificFunnc(0x17, 0x16, 0x10);
+            stageFlagResetFunnc(0x17, 0x17, 0); stageFlagResetFunnc(0x17, 0x1C, 0);
+            stageFlagResetSpecificFunnc(0x17, 0x1D, 16);
+            eventFlagResetFunnc(0x2640, false); eventFlagResetFunnc(0x2620, false);
+            eventFlagResetFunnc(0x2610, false); eventFlagResetFunnc(0x2608, false);
+            eventFlagResetFunnc(0x2604, false); eventFlagResetFunnc(0x2602, false);
+            eventFlagResetFunnc(0x2601, false); eventFlagResetFunnc(0x2780, false);
+            eventFlagResetFunnc(0x2740, false); eventFlagResetFunnc(0x2720, false); eventFlagResetFunnc(0x2880, false);
+            eventFlagResetFunnc(0x4304, false); eventFlagResetFunnc(0x4302, false); eventFlagResetFunnc(0x4301, false);
         }
 
         // Ammo
